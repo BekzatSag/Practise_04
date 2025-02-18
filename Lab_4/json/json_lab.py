@@ -1,6 +1,6 @@
 import json
-f = open("sample-data.json", "r")
-x = json.load(f)
+with open("sample-data.json", 'r') as file:
+    x = json.load(file)
 print("Interface Status\n================================================================================\n" + "DN".ljust(51)+"Description".ljust(22)+"Speed".ljust(9)+"MTU\n-------------------------------------------------- --------------------  ------  ------")
 for i in x["imdata"]:
     dn = i["l1PhysIf"]["attributes"]["dn"]
